@@ -1,0 +1,831 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: #000000;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 98px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Центровка пунктов меню */
+  position: relative;
+}
+
+nav ul img {
+  position: absolute; /* Фиксируем логотип */
+  left: 5%; /* Отступ от левого края */
+  width: 70px; /* Размер логотипа */
+  height: auto;
+}
+
+nav ul li {
+  margin-left: 20px; /* Расстояние между пунктами меню */
+  font-size: 16px;
+}
+
+header nav ul li {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+header button {
+  margin: 20px 5%;
+  display: block;
+  margin-left: auto;
+  background-color: #024023;
+  color: #fff;
+  border: 2px solid #024023;
+  padding: 14px 28px; /* Увеличенные отступы для размера кнопки */
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* Плавный переход для эффектов */
+  font-family: "Proxima Nova";
+}
+
+header button:hover {
+  background-color: #fff;
+  color: #024023;
+  border-color: #024023;
+}
+
+full-screen-image {
+  background-image: url("your-image.jpg"); /* Замените на путь к вашей картинке */
+  background-size: cover; /* Растягивает картинку на весь блок */
+  background-position: center; /* Центрирует картинку */
+  background-repeat: no-repeat; /* Отключает повторение */
+  height: 70%; /* Высота равна 100% высоты экрана */
+  width: 100%; /* Картинка занимает всю ширину родителя */
+  height: auto; /* Сохраняет пропорции изображения */
+  max-height: 400px; /* Максимальная высота изображения */
+  object-fit: cover;
+  display: flex;
+  justify-content: center; /* Центрирование контента по горизонтали */
+  align-items: center; /* Центрирование контента по вертикали */
+  text-align: center;
+  color: #fff; /* Белый текст для контраста */
+}
+
+/* Почему мы */
+/* Основной контейнер WHY US */
+#why-us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 5%;
+  gap: 40px;
+}
+
+/* Блок с изображением */
+.image-placeholder {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Центрирование изображения */
+}
+
+.image-placeholder img {
+  width: 70%; /* Измените это значение для уменьшения ширины */
+  max-width: 500px; /* Максимальная ширина для контроля размера */
+  height: auto; /* Сохраняет пропорции изображения */
+  display: block;
+  object-fit: cover; /* Подгоняет изображение, обрезая его если нужно */
+  border-radius: 0; /* Убираем закругление углов */
+}
+
+/* Блок с текстом */
+.reasons {
+  flex: 1; /* Равномерное распределение */
+}
+
+.reasons h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-family: "Cormorant Garamond", serif;
+  color: #024023;
+  text-transform: uppercase;
+}
+
+/* Блок одной причины */
+.reason {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Отступы между номером и текстом */
+  margin-bottom: 20px; /* Отступ между причинами */
+}
+
+.reason h3 {
+  color: #024023;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.reason div {
+  display: flex;
+  flex-direction: column;
+}
+
+.reason h4 {
+  font-size: 18px;
+  font-family: "Proxima Nova", sans-serif;
+  color: #024023;
+  margin-bottom: 5px;
+}
+
+.reason p {
+  font-size: 16px;
+  color: #555;
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 1.4;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd; /* Горизонтальная линия */
+  margin: 10px 0;
+}
+
+/* Этапы работы */
+#steps {
+  padding: 40px 5%;
+  text-align: left;
+}
+
+#steps h2 {
+  font-size: 48px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Расстояние между блоками */
+  text-align: left;
+}
+
+.step {
+  background-color: #fff;
+  border: 1px solid #024023;
+  padding: 20px;
+  text-align: left;
+}
+
+.step.green {
+  background-color: #024023;
+  color: #fff;
+}
+
+.step h3 {
+  font-size: 24px;
+  font-family: "Proxima Nova", serif;
+  margin: 0;
+  color: #024023;
+}
+
+.step.green h3 {
+  color: #fff;
+}
+
+.step p {
+  font-size: 16px;
+  color: #024023;
+  margin-top: 10px;
+}
+.step.green p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.step strong {
+  font-weight: bold;
+  color: #024023;
+}
+
+.image-step img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Секция проектов */
+#projects {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: left;
+  text-align: left;
+}
+
+#projects h2 {
+  font-size: 48px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 30px;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 40px 5%;
+}
+
+/* Слайдер */
+.projects-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll; /* Горизонтальный скролл */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Скрываем скроллбар для IE и Edge */
+  scrollbar-width: none; /* Скрываем скроллбар для Firefox */
+  cursor: grab;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* Скрытие скроллбара для Chrome и Safari */
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Стили для карточки проекта */
+.project {
+  position: relative;
+  flex: 0 0 400px; /* Ширина блока */
+  height: 500px; /* Высота фото */
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполняет блок */
+}
+
+/* Карточка поверх фото */
+.project-card {
+  position: absolute;
+  bottom: 20px; /* Отступ снизу */
+  left: 20px; /* Отступ слева */
+  width: 85%;
+  background-color: #fff;
+  color: #fff;
+  padding: 15px;
+  border-radius: 0; /* Убираем скругления */
+  text-align: center;
+  text-align: left;
+}
+
+.project-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.project-card button {
+  margin-top: 10px;
+  background-color: #024023;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.project-card button:hover {
+  background-color: #02351a;
+}
+
+/* Отзывы */
+#reviews {
+  padding: 40px 5%;
+  text-align: left;
+}
+
+#reviews h2 {
+  font-size: 48px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Левая, центральная и правая колонка */
+  gap: 20px;
+}
+
+.review {
+  background-color: #9db5a9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.review-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Proxima Nova", serif;
+  color: #024023;
+}
+
+.stars {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.review p {
+  font-size: 16px;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.review .location {
+  font-size: 14px;
+  color: #76887f;
+  display: block;
+  margin-top: 10px;
+}
+
+.reviews-center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review.left {
+  grid-column: 1 / 2;
+}
+
+.review.right {
+  grid-column: 3 / 4;
+}
+
+.reviews-button {
+  margin-top: 30px;
+}
+
+.reviews-button button {
+  margin: 20px 5%;
+  display: block;
+  margin-left: auto;
+  background-color: #024023;
+  color: #fff;
+  border: 2px solid #024023;
+  padding: 14px 28px; /* Увеличенные отступы для размера кнопки */
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* Плавный переход для эффектов */
+  font-family: "Proxima Nova";
+}
+
+.reviews-button button:hover {
+  background-color: #fff;
+  color: #024023;
+  border-color: #024023;
+}
+
+/* Бесплатная консультация */
+#consultation {
+  padding: 60px 5%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.consultation-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.consultation-form {
+  order: 1;
+}
+
+.consultation-image {
+  order: 2;
+  align-items: end;
+}
+
+.consultation-image img {
+  width: 100%; /* Измените это значение для уменьшения ширины */
+  max-width: 500px; /* Максимальная ширина для контроля размера */
+  height: auto; /* Сохраняет пропорции изображения */
+  display: block;
+  object-fit: cover; /* Подгоняет изображение, обрезая его если нужно */
+  border-radius: 0; /* Убираем закругление углов */
+}
+
+.consultation-form h2 {
+  font-size: 48px;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 30px;
+  margin-top: 0%;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.consultation-form p {
+  font-size: 18px;
+  color: #024023;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+form button {
+  background-color: #024023;
+  color: #fff;
+  padding: 12px;
+  border-color: #024023;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #fff;
+  color: #024023;
+  border-color: #024023;
+}
+/* Общий стиль футера */
+#footer {
+  background-color: #024023; /* Темно-зеленый цвет */
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Навигационные ссылки */
+.footer-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f2f2f2; /* Светлее при наведении */
+}
+
+/* Социальные сети */
+.footer-social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-social a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2); /* Увеличение иконок при наведении */
+}
+
+/* Логотип */
+.footer-logo a img {
+  width: 60px;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.footer-logo a:hover img {
+  opacity: 0.8; /* Легкое затемнение логотипа при наведении */
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #why-us {
+    flex-direction: column;
+  }
+
+  .projects-slider {
+    gap: 10px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .consultation-container {
+    grid-template-columns: 1fr; /* Один столбец для мобильных устройств */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Колонки уменьшаются пропорционально */
+  }
+
+  .review {
+    padding: 15px;
+  }
+
+  .review-header img {
+    width: 45px; /* Уменьшаем размер аватара */
+    height: 45px;
+  }
+
+  .review-header h3 {
+    font-size: 18px; /* Уменьшаем шрифт заголовков */
+  }
+
+  .review p {
+    font-size: 15px; /* Уменьшаем шрифт текста */
+  }
+
+  .review .location {
+    font-size: 13px; /* Уменьшаем шрифт для города */
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    grid-template-columns: 1fr; /* Все блоки переходят в одну колонку */
+    gap: 20px; /* Увеличиваем расстояние между блоками */
+  }
+
+  .review {
+    padding: 15px;
+  }
+
+  .review-header img {
+    width: 40px; /* Ещё меньше аватар */
+    height: 40px;
+  }
+
+  .review-header h3 {
+    font-size: 16px; /* Уменьшение шрифта имени */
+  }
+
+  .review p {
+    font-size: 14px; /* Уменьшение шрифта текста */
+  }
+
+  .review .location {
+    font-size: 12px; /* Уменьшение шрифта для города */
+  }
+
+  .reviews-button {
+    text-align: center;
+  }
+
+  .reviews-button button {
+    font-size: 16px; /* Размер кнопки для мобильных устройств */
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Переход к одной колонке на мобильных */
+  .reviews {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 20px;
+  }
+
+  .review.right {
+    display: none; /* Скрываем четвёртый отзыв */
+  }
+
+  .review {
+    padding: 15px; /* Уменьшаем отступы */
+  }
+
+  .review-header img {
+    width: 40px; /* Уменьшаем размер аватара */
+    height: 40px;
+  }
+
+  .review-header h3 {
+    font-size: 16px; /* Уменьшение шрифта имени */
+  }
+
+  .review p {
+    font-size: 14px; /* Уменьшение шрифта текста */
+  }
+
+  .review .location {
+    font-size: 12px; /* Уменьшение шрифта для города */
+  }
+
+  .reviews-button {
+    text-align: center;
+  }
+
+  .reviews-button button {
+    font-size: 16px; /* Размер кнопки для мобильных устройств */
+    padding: 10px 20px;
+  }
+}
+
+header nav ul {
+  list-style: none; /* Убираем маркеры */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+header nav ul li a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #000; /* Цвет текста */
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #024023; /* Цвет при наведении */
+}
+
+header button a:hover {
+  text-decoration: none; /* Убираем подчеркивание у ссылки */
+  color: inherit; /* Наследуем цвет от кнопки */
+  display: block; /* Делает ссылку блочной для работы с размерами кнопки */
+}
+
+/* Скрываем блок на больших экранах */
+#video {
+  display: none; /* Скрыт по умолчанию */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Показываем только на мобильных устройствах */
+@media (max-width: 768px) {
+  #video {
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 5%;
+    align-items: center; /* Включаем на мобильных */
+  }
+
+  #video h2 {
+    font-size: 48px;
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-container img {
+    width: 90%; /* Занимает почти всю ширину экрана */
+    max-width: 400px; /* Ограничение размера */
+    border-radius: 5px; /* Слегка скругляем углы */
+    cursor: pointer; /* Указатель при наведении */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+  }
+
+  .video-container img:hover {
+    transform: scale(1.05); /* Увеличиваем изображение при наведении */
+  }
+}
