@@ -52,14 +52,14 @@ nav ul {
 }
 
 nav ul img {
-  position: absolute; /* Фиксируем логотип */
-  left: 5%; /* Отступ от левого края */
-  width: 70px; /* Размер логотипа */
+  position: absolute;
+  left: 5%;
+  width: 70px;
   height: auto;
 }
 
 nav ul li {
-  margin-left: 20px; /* Расстояние между пунктами меню */
+  margin-left: 20px;
   font-size: 16px;
 }
 
@@ -89,21 +89,21 @@ header button:hover {
   border-color: #024023;
 }
 
-full-screen-image {
-  background-image: url("your-image.jpg"); /* Замените на путь к вашей картинке */
-  background-size: cover; /* Растягивает картинку на весь блок */
-  background-position: center; /* Центрирует картинку */
-  background-repeat: no-repeat; /* Отключает повторение */
-  height: 70%; /* Высота равна 100% высоты экрана */
-  width: 100%; /* Картинка занимает всю ширину родителя */
-  height: auto; /* Сохраняет пропорции изображения */
-  max-height: 400px; /* Максимальная высота изображения */
-  object-fit: cover;
+.full-screen-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
   display: flex;
-  justify-content: center; /* Центрирование контента по горизонтали */
-  align-items: center; /* Центрирование контента по вертикали */
-  text-align: center;
-  color: #fff; /* Белый текст для контраста */
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 100vw;
 }
 
 /* Почему мы */
@@ -671,11 +671,15 @@ form button:hover {
   }
 
   .review .location {
-    font-size: 13px; /* Уменьшаем шрифт для города */
+    font-size: 13px;
   }
 }
 
 @media (max-width: 768px) {
+  full-screen-image {
+    min-height: 150px;
+  }
+
   .reviews {
     grid-template-columns: 1fr; /* Все блоки переходят в одну колонку */
     gap: 20px; /* Увеличиваем расстояние между блоками */
@@ -827,5 +831,20 @@ header button a:hover {
 
   .video-container img:hover {
     transform: scale(1.05); /* Увеличиваем изображение при наведении */
+  }
+}
+
+/* Медиа-запросы для улучшенной адаптивности */
+@media (max-width: 768px) {
+  .full-screen-image img {
+    width: 100%; /* Изображение занимает всю ширину экрана */
+    height: auto; /* Пропорциональная высота */
+  }
+}
+
+@media (max-width: 480px) {
+  .full-screen-image img {
+    width: 100%; /* Остается адаптивным */
+    height: auto;
   }
 }
